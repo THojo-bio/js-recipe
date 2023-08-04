@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>この中で1番新しく追加された種目は何？？？</h1>
+    <button id="button-1">バタフライ</button>
+    <button id="button-2">背泳ぎ</button>
+    <button id="button-3">平泳ぎ</button>
+    <button id="button-4">自由形</button>
+    <div id="display">どれでしょうか？</div>
+
+    <script>
+      const button1 = document.getElementById("button-1")
+      const button2 = document.getElementById("button-2")
+      const button3 = document.getElementById("button-3")
+      const button4 = document.getElementById("button-4")
+      const display = document.getElementById("display")
+
+      button1.onclick = function () {
+        display.textContent = "正解！"
+      }
+      button2.onclick = function () {
+        display.textContent = "残念！"
+      }
+      button3.onclick = function () {
+        display.textContent = "惜しいね、ここから進化したんだよ"
+      }
+      button4.onclick = function () {
+        display.textContent = "これは起源だよね！"
+      }
+    </script>
+  </body>
+</html>

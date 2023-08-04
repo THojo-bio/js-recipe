@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="memo-input" />
+    <button id="add-button">保存</button>
+    <div id="memo-container"></div>
+
+    <script>
+      const memo_input = document.getElementById("memo-input")
+      const AddButton = document.getElementById("add-button")
+      const Memo_container = document.getElementById("memo-container")
+
+      function memo() {
+        const card = document.createElement("div")
+        card.textContent = memo_input.value
+        Memo_container.append(card)
+        memo_input.value = ""
+
+        const btn = document.createElement("button")
+        btn.innerHTML = "削除"
+        card.append(btn)
+
+        btn.onclick = function () {
+          card.remove()
+        }
+      }
+
+      AddButton.onclick = function () {
+        memo()
+      }
+    </script>
+  </body>
+</html>
