@@ -25,6 +25,14 @@ button.onclick = function () {
   const card = document.createElement("div")
   card.textContent = text
   container.appendChild(card)
+
+  // 表示のロジック
+  container.textContent = ""
+  for (const text of list) {
+    const card = document.createElement("div")
+    card.textContent = text
+    container.appendChild(card)
+  }
 }
 
 /**
